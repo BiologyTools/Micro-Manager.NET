@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MMConfig_demo.cfg" />
+    <None Remove="MMCoreJ_wrap.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MMConfig_demo.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MMCoreJ_wrap.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IKVM" Version="8.9.0-PullRequest0528.145" />
+  </ItemGroup>
+<ItemGroup>
+    <IkvmReference Include="C:/Program Files/Micro-Manager-2.0/ij.jar">
+      <AssemblyName>ij</AssemblyName>
+      <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+  </IkvmReference>
+<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMJ_.jar">
+      <AssemblyName>mmj</AssemblyName>
+      <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+  </IkvmReference>
+<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMCoreJ.jar">
+      <AssemblyName>mmc</AssemblyName>
+      <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+  </IkvmReference>
+<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMAcqEngine.jar">
+      <AssemblyName>mma</AssemblyName>
+      <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+  </IkvmReference>
+<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/swingx-0.9.5.jar">
+      <AssemblyName>swingx</AssemblyName>
+      <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+  </IkvmReference>
+</ItemGroup>
+</Project>
