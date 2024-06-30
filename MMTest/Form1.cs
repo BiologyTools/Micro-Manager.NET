@@ -16,13 +16,11 @@ namespace MMTest
             try
             {
                 MMStudio.main(args);
-                textBox.Text += "MMStudio main() completed.";
-                if (MMStudio.getInstance() != null)
-                    textBox.Text += "MMStudio Instance created.";
+                MMStudio ms = MMStudio.getInstance();
             }
             catch (Exception e)
             {
-                textBox.Text += "Error: " + e.Message;
+                Console.WriteLine(e.Message);
             }
         }
     }
