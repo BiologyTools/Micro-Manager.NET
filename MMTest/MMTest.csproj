@@ -6,13 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="MMConfig_demo.cfg" />
-    <None Remove="MMCoreJ_wrap.dll" />
-  </ItemGroup>
-
   <ItemGroup>
     <Content Include="MMConfig_demo.cfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -21,35 +16,511 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="IKVM" Version="8.9.0-PullRequest0528.145" />
-  </ItemGroup>
 <ItemGroup>
     <IkvmReference Include="C:/Program Files/Micro-Manager-2.0/ij.jar">
       <AssemblyName>ij</AssemblyName>
       <AssemblyVersion>1.0.0.0</AssemblyVersion>
       <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
   </IkvmReference>
-<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMJ_.jar">
-      <AssemblyName>mmj</AssemblyName>
-      <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-  </IkvmReference>
-<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMCoreJ.jar">
+  <IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMCoreJ.jar">
       <AssemblyName>mmc</AssemblyName>
       <AssemblyVersion>1.0.0.0</AssemblyVersion>
       <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-  </IkvmReference>
-<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMAcqEngine.jar">
-      <AssemblyName>mma</AssemblyName>
+      <DisableAutoAssemblyName>true</DisableAutoAssemblyName>
+      <DisableAutoAssemblyVersion>true</DisableAutoAssemblyVersion>
+      <FallbackAssemblyName>mmc</FallbackAssemblyName>
+      <FallbackAssemblyVersion>1.0.0.0</FallbackAssemblyVersion>
+      <Aliases>mmc</Aliases>
+      <Compile>ij.jar;AppleJavaExtensions-1.4.jar;args4j-2.33.jar;Big.jar;bio-formats-tools-5.5.3.jar;boofcv-geo-0.36.jar;boofcv-ip-0.36.jar;boofcv-types-0.36.jar;bridj-0.7.0.jar;bsh-2.0b6.jar;caffeine-2.4.0.jar;clearaudio-1.0.2.jar;clearcl-0.5.2.jar;clearcl-0.6.0.jar;cleargl-2.2.6.jar;clearvolume-1.4.3.jar;clij_-1.9.0.1.jar;clij2_-2.5.3.1.jar;clij-clearcl-2.5.0.1.jar;clij-core-1.8.1.1.jar;clij-coremem-2.3.0.4.jar;clojure-1.3.0.jar;commons-io-2.11.0.jar;commons-lang-2.6.jar;commons-lang3-3.10.jar;commons-logging-1.1.1.jar;commons-math-2.2.jar;commons-math3-3.6.1.jar;core.cache-0.6.2.jar;core.memoize-0.5.2.jar;coremem-0.4.5.jar;data.json-0.1.1.jar;ddogleg-0.18.jar;DT1.2-.jar;dx-1.7.jar;ejml-cdense-0.39.jar;ejml-core-0.39.jar;ejml-ddense-0.39.jar;ejml-dsparse-0.39.jar;ejml-fdense-0.39.jar;ejml-fsparse-0.39.jar;ejml-simple-0.39.jar;ejml-zdense-0.39.jar;eventbus-1.4.jar;fiji-lib-2.1.2.jar;formats-api-5.5.3.jar;formats-bsd-5.5.3.jar;formats-common-5.1.1.jar;formats-gpl-5.5.3.jar;GaussianLibrary.jar;georegression-0.22.jar;gluegen-rt-2.3.2.jar;gluegen-rt-2.3.2-natives-linux-amd64.jar;gluegen-rt-2.3.2-natives-linux-i586.jar;gluegen-rt-2.3.2-natives-macosx-universal.jar;gluegen-rt-2.3.2-natives-windows-amd64.jar;gluegen-rt-2.3.2-natives-windows-i586.jar;gluegen-rt-main-2.3.2.jar;gson-2.2.4.jar;guava-17.0.jar;hamcrest-core-1.3.jar;iconloader-GIT.jar;imagej-common-0.33.0.jar;imagej-legacy-0.37.4.jar;ImageProcessing.jar;imglib2-5.10.0.jar;imglib2-cache-1.0.0-beta-13.jar;imglib2-ij-2.0.0-beta-46.jar;imglib2-realtransform-3.0.0.jar;imglib2-roi-0.10.3.jar;jai_imageio-5.5.3.jar;jama-1.0.3.jar;javacl-1.0.0-RC4.jar;javacl-core-1.0.0-RC4.jar;jcommon-1.0.24.jar;jdatepicker-1.3.2.jar;jeromq-0.5.1.jar;jfreechart-1.5.0.jar;jgoodies-common-1.7.0.jar;jgoodies-forms-1.7.2.jar;jhdf5-14.12.0.jar;jitk-tps-3.0.2.jar;jna-4.5.2.jar;jnacl-1.0.0.jar;jna-platform-4.5.1.jar;jocl-2.0.2.jar;joda-time-2.2.jar;jogl-all-2.3.2.jar;jogl-all-2.3.2-natives-linux-amd64.jar;jogl-all-2.3.2-natives-linux-i586.jar;jogl-all-2.3.2-natives-macosx-universal.jar;jogl-all-2.3.2-natives-windows-amd64.jar;jogl-all-2.3.2-natives-windows-i586.jar;jogl-all-main-2.3.2.jar;jogl-all-main-2.3.2-javadoc.jar;jogl-all-main-2.3.2-sources.jar;jsr250-api-1.0.jar;jsr305-3.0.2.jar;junit-4.12.jar;JWlz-1.4.0.jar;jxinput-0.8.jar;jxrlib-all-0.2.1.jar;kryo-2.24.0.jar;logback-classic-1.1.1.jar;logback-core-1.1.1.jar;metadata-extractor-2.6.2.jar;metakit-5.3.0.jar;miglayout-3.7.4.jar;miglayout-core-5.3.jar;miglayout-swing-5.3.jar;miglayout-swt-5.3.jar;minlog-1.2.jar;MM2MacroExtensions_.jar;MMAcqEngine.jar;MMCoreJ.jar;MMJ_.jar;native-lib-loader-2.1.4.jar;nativelibs4java-utils-1.6.jar;NDTiffStorage-2.18.4.jar;NDViewer-0.10.2.jar;netcdf-4.3.22.jar;object-inspector-0.1.jar;objenesis-2.1.jar;ome-common-5.3.1.jar;ome-mdbtools-5.3.0.jar;ome-poi-5.3.1.jar;ome-xml-5.1.1.jar;ome-xml-5.5.4.jar;opencl4java-1.0.0-RC4.jar;parsington-2.0.0.jar;perf4j-0.9.13.jar;prettytime-4.0.1.Final.jar;Projector.jar;protobuf-java-2.6.1.jar;PycroManagerJava-0.46.16.jar;PyJavaZ-1.0.0.jar;rsyntaxtextarea-3.1.1.jar;scifio-0.41.0.jar;scifio-jai-imageio-1.1.1.jar;scijava-common-2.83.3.jar;scijava-optional-1.0.0.jar;scijava-table-0.6.1.jar;scijava-ui-swing-0.13.2.jar;scripting-java-0.4.1.jar;serializer-2.7.2.jar;slf4j-api-1.7.30.jar;specification-5.5.4.jar;swingx-0.9.5.jar;trove4j-3.0.3.jar;turbojpeg-5.5.3.jar;udunits-4.3.18.jar;vecmath-1.5.2.jar;vecmath-1.6.0-scijava-2.jar;xalan-2.7.2.jar;xercesImpl-2.8.1.jar;xml-apis-1.3.04.jar;xmpcore-5.1.2.jar;AcqEngJ-0.38.1.jar</Compile>
+    </IkvmReference>
+  <IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/clojure-1.3.0.jar">
+      <AssemblyName>cloj</AssemblyName>
       <AssemblyVersion>1.0.0.0</AssemblyVersion>
       <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-  </IkvmReference>
-<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/swingx-0.9.5.jar">
-      <AssemblyName>swingx</AssemblyName>
-      <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-  </IkvmReference>
+      <DisableAutoAssemblyName>true</DisableAutoAssemblyName>
+      <DisableAutoAssemblyVersion>true</DisableAutoAssemblyVersion>
+      <FallbackAssemblyName>cloj</FallbackAssemblyName>
+      <FallbackAssemblyVersion>1.0.0.0</FallbackAssemblyVersion>
+      <Aliases>cloj</Aliases>
+      </IkvmReference>
+</ItemGroup>
+<ItemGroup>
+  <PackageReference Include="IKVM" Version="8.9.0-PullRequest0528.145" />
+</ItemGroup>
+<ItemGroup>
+  <None Update="AcqEngJ-0.38.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="AppleJavaExtensions-1.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="args4j-2.33.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="Big.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="bio-formats-tools-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="boofcv-geo-0.36.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="boofcv-ip-0.36.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="boofcv-types-0.36.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="bridj-0.7.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="bsh-2.0b6.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="caffeine-2.4.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clearaudio-1.0.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clearcl-0.5.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clearcl-0.6.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="cleargl-2.2.6.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clearvolume-1.4.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clij-clearcl-2.5.0.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clij-core-1.8.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clij-coremem-2.3.0.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clij2_-2.5.3.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clij_-1.9.0.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="clojure-1.3.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-io-2.11.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-lang-2.6.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-lang3-3.10.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-logging-1.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-math-2.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="commons-math3-3.6.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="core.cache-0.6.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="core.memoize-0.5.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="coremem-0.4.5.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="data.json-0.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ddogleg-0.18.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="DT1.2-.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="dx-1.7.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-cdense-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-core-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-ddense-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-dsparse-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-fdense-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-fsparse-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-simple-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ejml-zdense-0.39.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="eventbus-1.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="fiji-lib-2.1.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="formats-api-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="formats-bsd-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="formats-common-5.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="formats-gpl-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="GaussianLibrary.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="georegression-0.22.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2-natives-linux-amd64.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2-natives-linux-i586.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2-natives-macosx-universal.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2-natives-windows-amd64.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2-natives-windows-i586.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-2.3.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gluegen-rt-main-2.3.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="gson-2.2.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="guava-17.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="hamcrest-core-1.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="iconloader-GIT.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ij.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imagej-common-0.33.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imagej-legacy-0.37.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ImageProcessing.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imglib2-5.10.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imglib2-cache-1.0.0-beta-13.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imglib2-ij-2.0.0-beta-46.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imglib2-realtransform-3.0.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="imglib2-roi-0.10.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jai_imageio-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jama-1.0.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="javacl-1.0.0-RC4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="javacl-core-1.0.0-RC4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jcommon-1.0.24.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jdatepicker-1.3.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jeromq-0.5.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jfreechart-1.5.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jgoodies-common-1.7.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jgoodies-forms-1.7.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jhdf5-14.12.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jitk-tps-3.0.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jna-4.5.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jna-platform-4.5.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jnacl-1.0.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jocl-2.0.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="joda-time-2.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2-natives-linux-amd64.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2-natives-linux-i586.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2-natives-macosx-universal.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2-natives-windows-amd64.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2-natives-windows-i586.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-2.3.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-main-2.3.2-javadoc.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-main-2.3.2-sources.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jogl-all-main-2.3.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jsr250-api-1.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jsr305-3.0.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="junit-4.12.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="JWlz-1.4.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jxinput-0.8.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="jxrlib-all-0.2.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="kryo-2.24.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="logback-classic-1.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="logback-core-1.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="metadata-extractor-2.6.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="metakit-5.3.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="miglayout-3.7.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="miglayout-core-5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="miglayout-swing-5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="miglayout-swt-5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="minlog-1.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="MM2MacroExtensions_.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="MMAcqEngine.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="MMCoreJ.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="MMJ_.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="native-lib-loader-2.1.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="nativelibs4java-utils-1.6.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="NDTiffStorage-2.18.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="NDViewer-0.10.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="netcdf-4.3.22.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="object-inspector-0.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="objenesis-2.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ome-common-5.3.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ome-mdbtools-5.3.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ome-poi-5.3.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ome-xml-5.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="ome-xml-5.5.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="opencl4java-1.0.0-RC4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="parsington-2.0.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="perf4j-0.9.13.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="prettytime-4.0.1.Final.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="Projector.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="protobuf-java-2.6.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="PycroManagerJava-0.46.16.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="PyJavaZ-1.0.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="rsyntaxtextarea-3.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scifio-0.41.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scifio-jai-imageio-1.1.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scijava-common-2.83.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scijava-optional-1.0.0.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scijava-table-0.6.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scijava-ui-swing-0.13.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="scripting-java-0.4.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="serializer-2.7.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="slf4j-api-1.7.30.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="specification-5.5.4.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="swingx-0.9.5.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="trove4j-3.0.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="turbojpeg-5.5.3.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="udunits-4.3.18.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="vecmath-1.5.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="vecmath-1.6.0-scijava-2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="xalan-2.7.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="xercesImpl-2.8.1.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="xml-apis-1.3.04.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="xmpcore-5.1.2.jar">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
 </ItemGroup>
 </Project>
