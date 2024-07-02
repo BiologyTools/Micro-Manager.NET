@@ -1,13 +1,11 @@
-﻿using AForge;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RectangleD = AForge.RectangleD;
 
-namespace MMTest
+namespace MicroManagerNET
 {
     public static class MicroManager
     {
@@ -84,7 +82,6 @@ namespace MMTest
                 return false;
             }
             Shutters.Initialize();
-            Point3D loc = new Point3D();
             return true;
         }
         public static class Objectives
