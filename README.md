@@ -1,3 +1,5 @@
+[![NuGet version (ImageJ.NET)](https://img.shields.io/nuget/v/ImageJ.NET.svg)](https://www.nuget.org/packages/ImageJ.NET/154.1.0)
+[![NuGet version (ImageJ.NET)](https://img.shields.io/nuget/dt/ImageJ.NET?color=g)](https://www.nuget.org/packages/ImageJ.NET/154.1.0)
 # Micro-Manager.NET
  Controlling Micro-Manager 2.0.3 with IKVM & C#
 
