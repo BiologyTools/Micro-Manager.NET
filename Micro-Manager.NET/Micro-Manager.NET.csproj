@@ -21,12 +21,6 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageIcon>umanager-logo.png</PackageIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="MMCoreJ_wrap.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 	<ItemGroup>
 		<IkvmReference Include="C:/Program Files/Micro-Manager-2.0/plugins/Micro-Manager/MMCoreJ.jar">
 			<AssemblyName>mmc</AssemblyName>
