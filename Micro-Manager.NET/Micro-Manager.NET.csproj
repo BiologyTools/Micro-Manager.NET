@@ -16,7 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/BiologyTools/Micro-Manager.NET</RepositoryUrl>
     <PackageTags>micro-manager</PackageTags>
-    <PackageReleaseNotes>First release of Micro-Manager.NET</PackageReleaseNotes>
+    <PackageReleaseNotes>Windows 11 support, dependecy updates and CUDA stitching of tiles.</PackageReleaseNotes>
     <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageIcon>umanager-logo.png</PackageIcon>
