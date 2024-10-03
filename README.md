@@ -4,7 +4,7 @@
  Controlling Micro-Manager 2.0.3 with IKVM & C#
 
 # Building 
-- Get IKVM 8.9.0 or the [developer pre-release](https://github.com/ikvmnet/ikvm/actions/runs/9238355862/artifacts/1537937356).
+- Get IKVM 8.10.2.
 
 - Then use Micro-Manager in C#
 ```
@@ -17,18 +17,24 @@ namespace MMTest
         public Form1(string[] args)
         {
             InitializeComponent();
-            Directory.SetCurrentDirectory("C:/Program Files/Micro-Manager-2.0/");
+            // Now, set the Java "user.dir" system property to match the C# current directory
+            string p = Path.GetDirectoryName(config).Replace("\\","/");
+            Directory.SetCurrentDirectory(p);
+            java.lang.System.setProperty("user.dir",p);
             java.lang.System.setProperty("force.annotation.index", "true");
-            // Set the library path (adjust the path as needed)
-            java.lang.System.setProperty("org.micromanager.corej.path", "C:/Program Files/Micro-Manager-2.0");
+            java.lang.System.setProperty("org.micromanager.corej.path", "C:/Program Files/Micro-Manager-2.0/");
+            CMMCore core;
             try
             {
-                MMStudio.main(args);
-                MMStudio ms = MMStudio.getInstance();
+                MMStudio.main(new string[] {});
+                studio = MMStudio.getInstance();
+                core = studio.core();
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
             }
+            Directory.SetCurrentDirectory(Path.GetDirectoryName(Environment.ProcessPath));
         }
     }
 }
